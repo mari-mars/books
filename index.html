@@ -1550,7 +1550,7 @@ function vSave() {
 }
 
 // ---------- Add to Home Screen ----------
-const APP_URL = 'https://mh380686994346-cmyk.github.io/books/'; // the web address where the app is hosted, e.g. https://lilico.ca/books
+const APP_URL = 'https://lilico.academy/'; // the web address where the app is hosted, e.g. https://lilico.ca/books
 let installEv = null;
 window.addEventListener('beforeinstallprompt', e => { e.preventDefault(); installEv = e; if (tab === 'home') render(); });
 window.addEventListener('appinstalled', () => { installEv = null; toast('Added to your home screen'); render(); });
