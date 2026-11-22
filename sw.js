@@ -1,6 +1,6 @@
 // Keeps the app working offline. Bump VERSION when you upload a new index.html.
-const VERSION = 'books-v2';
-const CORE = ['./', 'index.html', 'manifest.json', 'icon-180.png', 'icon-192.png', 'icon-512.png'];
+const VERSION = 'books-v3';
+const CORE = ['./', 'index.html', 'manifest.json', 'icon-180.png', 'icon-192.png', 'icon-512.png', 'favicon-32.png', 'favicon.ico'];
 self.addEventListener('install', e => { e.waitUntil(caches.open(VERSION).then(c => c.addAll(CORE))); self.skipWaiting(); });
 self.addEventListener('activate', e => { e.waitUntil(caches.keys().then(ks => Promise.all(ks.filter(k => k !== VERSION).map(k => caches.delete(k))))); self.clients.claim(); });
 self.addEventListener('fetch', e => {
